@@ -26,7 +26,7 @@ public class War extends CardGame{
 		int user; //user's input for this class
 		
 		System.out.println("Welcome to War. This is a two player game.");
-		//todo: take players through the game
+		//todo: take players through game
 		
 	
 		

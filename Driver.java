@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class CardProgram 
+public class Driver 
 {
 
 	public static void main(String[] args)
@@ -194,12 +194,14 @@ public class CardProgram
 
 	public static void War()
 	{
-
+		War warGame = new War();
+		warGame.runGame();
 		
 		//War card game
-		
+		System.out.println("-------------------------------------------------------");
 		int x = 2; //play again choice method
 		choice(x);
+		
 	}
 	
 	public static void JavaLand()
@@ -224,7 +226,6 @@ public class CardProgram
 		
 				if (roll.equalsIgnoreCase("r")) 
 				{
-					//int result = diceRoll.nextInt(6) + 1;
 					score2 += result;
 					System.out.println("You rolled a " + result + ". Score: " + score2); 
 					System.out.println("----------------------------");
@@ -256,23 +257,26 @@ public class CardProgram
  
 			}
 
-			if(score1 == 100 || score2 == 100)
+			if(score1 >= 100 || score2 >= 100)
 				break;
 		}
 			
 		if(score1 == 100 && score2 < 100) 
 		{
 			System.out.println("Player 1 wins!"); 
+			System.out.println("-------------------------------------------------------");
 			choice(x); 
 		} 
 		else if(score1 == 100 && score2 == 100) 
 		{ 
 			System.out.println("What a rare feat, its a tie!");
+			System.out.println("-------------------------------------------------------");
 			choice(x);
 		} 
 		else 
 		{ 
 			System.out.println("Player 2 wins!");
+			System.out.println("-------------------------------------------------------");
 			choice(x);
 		}	
 		

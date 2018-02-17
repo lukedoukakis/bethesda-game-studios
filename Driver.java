@@ -1,6 +1,7 @@
 import java.util.Scanner;
+import java.util.Random;
 
-public class Driver 
+public class CardProgram 
 {
 
 	public static void main(String[] args)
@@ -77,8 +78,7 @@ public class Driver
                 	}
                 	else if(gameChoice.equalsIgnoreCase("w"))
                 	{
-                        	War warGame = new War();
-				warGame.runGame(); //Replace if needed
+                        	War(); //Replace if needed
                 	}
                 	else
                 	{
@@ -204,9 +204,76 @@ public class Driver
 	
 	public static void BoardGame()
 	{
-		//Boardgame
-		
+		int max = 6; //Boardgame 
+		int min = 1;  
 		int x = 3; //play again choice method variable
-		choice(x);
-	}		
+		System.out.println("Welcome to JavaLand! First to 100 Wins!");  
+		System.out.println();
+
+
+		int score1 = 0, score2 = 0;
+		for(int i = 1; i< 100; i++)  
+		{   
+			Random diceRoll = new Random();  
+			int result = min + diceRoll.nextInt(max);  
+			if ((i % 2) == 0)
+			{
+				System.out.print("Player 2: Enter R to roll the dice "); 
+				Scanner input = new Scanner(System.in); 
+				String roll = input.nextLine();
+		
+				if (roll.equalsIgnoreCase("r")) 
+				{
+					//int result = diceRoll.nextInt(6) + 1;
+					score2 += result;
+					System.out.println("You rolled a " + result + ". Score: " + score2); 
+					System.out.println("----------------------------");
+						
+				}
+				else
+				{
+					System.out.println("Invalid input. Please try again: ");
+					roll = input.nextLine();
+				}
+			} 
+			else 
+			{ 
+				System.out.println("Player 1: Enter R to roll the dice "); 
+				Scanner input = new Scanner(System.in); 
+				String roll = input.nextLine();
+		
+				if (roll.equalsIgnoreCase("r")) 
+				{
+					score1 += result;
+					System.out.println("You rolled a " + result + ". Score: " + score1);
+					System.out.println("----------------------------");			
+				}
+                                else
+                                {
+                                        System.out.println("Invalid input. Please try again: ");
+                                        roll = input.nextLine();
+                                }
+ 
+			}
+
+			if(score1 == 100 || score2 == 100)
+				break;
+		}
+			
+		if(score1 == 100 && score2 < 100) 
+		{
+			System.out.println("Player 1 wins!"); 
+			choice(x); 
+		} 
+		else if(score1 == 100 && score2 == 100) 
+		{ 
+			System.out.println("What a rare feat, its a tie!"); 
+		} 
+		else 
+		{ 
+			System.out.println("Player 2 wins!");
+			choice(x);
+		}	
+		
+	}
 }

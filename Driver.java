@@ -267,7 +267,8 @@ public class CardProgram
 		} 
 		else if(score1 == 100 && score2 == 100) 
 		{ 
-			System.out.println("What a rare feat, its a tie!"); 
+			System.out.println("What a rare feat, its a tie!");
+			choice(x);
 		} 
 		else 
 		{ 

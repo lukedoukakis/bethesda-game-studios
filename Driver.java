@@ -77,7 +77,8 @@ public class Driver
                 	}
                 	else if(gameChoice.equalsIgnoreCase("w"))
                 	{
-                        	War(); //Replace if needed
+                        	War warGame = new War();
+				warGame.runGame(); //Replace if needed
                 	}
                 	else
                 	{

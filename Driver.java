@@ -20,9 +20,9 @@ public class CardProgram
 
 		do
 		{
-			System.out.print("Enter 'H' to play higher or lower, 'W' to play War, and 'B' to play board game: ");
+			System.out.print("Enter 'H' to play higher or lower, 'W' to play War, and 'J' to play Javaland: ");
 			gameChoice = kb.nextLine();
-		} while (!gameChoice.equalsIgnoreCase("h") && !gameChoice.equalsIgnoreCase("w") && !gameChoice.equalsIgnoreCase("b"));
+		} while (!gameChoice.equalsIgnoreCase("h") && !gameChoice.equalsIgnoreCase("w") && !gameChoice.equalsIgnoreCase("j"));
 
 		if(gameChoice.equalsIgnoreCase("h"))
 		{
@@ -34,7 +34,7 @@ public class CardProgram
 		}
 		else
 		{
-			BoardGame();
+			JavaLand();
 		}
 	
 	}
@@ -59,7 +59,7 @@ public class CardProgram
 			else if(x == 2)
 				War();
 			else
-				BoardGame();
+				JavaLand();
 		}
 		else if(choiceBranch == 3)
 			System.exit(0);
@@ -68,9 +68,9 @@ public class CardProgram
 			String gameChoice;
                 	do
                 	{
-                        	System.out.print("Enter 'H' to play higher or lower, 'W' to play War, and 'B' to play board game: ");
+                        	System.out.print("Enter 'H' to play higher or lower, 'W' to play War, and 'J' to play JavaLand: ");
                         	gameChoice = kb.nextLine();
-                	} while (!gameChoice.equalsIgnoreCase("h") && !gameChoice.equalsIgnoreCase("w") && !gameChoice.equalsIgnoreCase("b"));
+                	} while (!gameChoice.equalsIgnoreCase("h") && !gameChoice.equalsIgnoreCase("w") && !gameChoice.equalsIgnoreCase("j"));
 
                 	if(gameChoice.equalsIgnoreCase("h"))
                 	{
@@ -82,7 +82,7 @@ public class CardProgram
                 	}
                 	else
                 	{
-                        	BoardGame();
+                        	JavaLand();
                 	}
 		}
 
@@ -202,7 +202,7 @@ public class CardProgram
 		choice(x);
 	}
 	
-	public static void BoardGame()
+	public static void JavaLand()
 	{
 		int max = 6; //Boardgame 
 		int min = 1;  

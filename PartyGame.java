@@ -16,4 +16,6 @@ public abstract class PartyGame {
 	void runGame(){
 		
 	}
+	//method to print results, overriden in my Deck.java- Hari
+	public abstract String getResults(int[] scoreCounter);
 }

@@ -3,6 +3,14 @@ import java.util.ArrayList;
 public class Player {
 	
 	String name;
-	ArrayList<Card> hand; //for card games
+	ArrayList<Card> hand;
+	
+	public String getName(){
+		return name;
+	}
+	
+	public void setName(String name){
+		this.name=name;
+	}
 
 }

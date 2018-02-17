@@ -12,10 +12,9 @@ public abstract class PartyGame {
 		}
 	}
 	
-	
-	void runGame(){
+	//method overriden in War.javaa
+	public void runGame();
 		
-	}
 	//method to print results, overriden in my Deck.java- Hari
 	public abstract String getResults(int[] scoreCounter);
 }
